@@ -1,0 +1,111 @@
+body {
+    background-color: #00b6fe66;
+    color: white;
+}
+
+header {
+    display: grid;
+    grid-auto-flow: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    background-color: #00b6fe66;
+    color: white;
+}
+
+.main__container {
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 1rem;
+    justify-items: center;
+}
+
+.progress__container {
+    width: 90vw;
+    background-color: rgb(177, 217, 255);
+}
+
+.progress__box {
+    width: 100%;
+    display: grid;
+}
+
+.progress__bar {
+    place-self: start;
+    height: 5vh;
+    background-color: rgb(0, 15, 155);
+}
+
+
+.progress__text {
+    font-size: 1rem;
+}
+
+.progress__alert {
+    color: rgb(245, 6, 6);
+}
+
+.quote__box {
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 1rem;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.quote__item {
+    width: 100%;
+    background-color: #00b6fe66;
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.quote__item:hover {
+    color: #0e01c4;
+    background-color: white;
+}
+
+.quote__container {
+    height: 100%;
+    width: 90vw;
+}
+
+.quote__text{
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.quote__add  {
+    width: 100%;
+    font-size: 2rem;
+    color: white;
+}
+
+.form-control  {
+    width: 100%;
+    font-size: 2rem;
+    background-color: #c6c7ff66;
+    color:  #0e01c4;
+}
+
+.add__button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    background-color:  #0e01c4;
+    color: white;
+    border-radius: 1rem;
+}
+
+.add__button:hover {
+    color: #0e01c4;
+    background-color: white;
+}
