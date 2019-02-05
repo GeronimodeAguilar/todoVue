@@ -1,7 +1,7 @@
 <template>
-    <div class="quote__item">
-        <div class="quote__container">
-            <p class="quote__text">
+    <div class="archive__item">
+        <div class="archive__container">
+            <p class="archive__text">
                 <slot></slot>
             </p>
         </div>

@@ -3,8 +3,8 @@
             <div class="progress__container">
                 <div class="progress__box">
                     <div class="progress__bar" role="progressbar" 
-                        :style="{width: (quoteCount / maxQuotes) * 100 + '%'}">
-                        {{ quoteCount }} / {{ maxQuotes}}
+                        :style="{width: (taskCount / maxTasks) * 100 + '%'}">
+                       <p class="counters"> {{ taskCount || '-' }} / {{ maxTasks || '-'}}</p>
                     </div>
                 </div>
             </div>
@@ -12,6 +12,6 @@
 </template>
 <script>
     export default {
-        props: ['quoteCount', 'maxQuotes']
+        props: ['taskCount', 'maxTasks']
     }
 </script>
