@@ -3,7 +3,7 @@
             <div class="progress__container">
                 <div class="progress__box">
                     <div class="progress__bar" role="progressbar" 
-                        :style="{width: (taskCount / archiveCount) * 100 + '%'}">
+                        :style="{width: (archiveCount /( archiveCount + taskCount )) * 100 + '%'}">
                        <p class="counters"> {{ taskCount || '-' }} / {{ archiveCount || '-'}}</p>
                     </div>
                 </div>
