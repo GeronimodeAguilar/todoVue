@@ -1,13 +1,13 @@
 <template>
     <div class="main__container">
         <section class="form__box">
-        <app-header :taskCount="tasks.length" :maxTasks="maxTasks"></app-header>
+        <app-header :taskCount="tasks.length" :archiveCount="archives.length" ></app-header>
         <app-new-task @taskAdded="newTask"></app-new-task>
         </section>
         <h2>Tasks:</h2>
         <app-task-grid :tasks="tasks" @archivedTask="archiveTask"></app-task-grid>
         <h2>Done tasks:</h2>
-        <app-archive-grid :archives="archives" ></app-archive-grid>
+        <app-archive-grid :archives="archives" @deleteArchive="deleteArchive"></app-archive-grid>
     </div>
 </template>
 
@@ -21,20 +21,19 @@
         data: function () {
             return {
                 tasks: [],               
-                archives: [],
-                maxTasks: 10
+                archives: []
             }
         },
         methods: {
             newTask(task) {
-                if (this.tasks.length >= this.maxTasks) {
-                    return alert('Please delete Tasks first!');
-                }
                 this.tasks.push(task);
             },
             archiveTask(task, index) {
                 this.tasks.splice(index, 1);
                 this.archives.push(task);
+            },
+            deleteArchive(index) {
+                this.archives.splice(index, 1);
             }
         },
         components: {

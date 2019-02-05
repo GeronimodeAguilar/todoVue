@@ -116,6 +116,17 @@ header {
     justify-items: center;
 }
 
+.archive__item {
+    background-color: #0e01c4;
+    color: white;
+    cursor: pointer;
+}
+
+.archive__item:hover {
+    color: #0e01c4;
+    background-color: white;
+}
+
 .archive__container {
     height: 100%;
     width: 90vw;

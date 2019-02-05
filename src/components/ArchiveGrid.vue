@@ -14,7 +14,7 @@
         },
         methods: {
             archiveTask(index) {
-                this.$emit('archiveDeleted', index);
+                this.$emit('deleteArchive', index);
             }
         }
     }
