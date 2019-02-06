@@ -39,13 +39,17 @@ header {
 }
 
 .progress__bar {
-    height: 5vh;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    height: 10vh;
     background-color: rgb(0, 15, 155);
 }
 
 
 .progress__text {
-    font-size: 1rem;
+    font-size: 3rem;
+    margin: 0;
 }
 
 .progress__alert {
@@ -64,7 +68,7 @@ header {
 
 .task__form {
     display: grid;
-    grid-auto-flow: row;
+    grid-template-columns: 60vw 1fr;
     grid-gap: 1rem;
     align-content: center;
     justify-content: center;
@@ -143,7 +147,7 @@ header {
 }
 
 .text__form {
-    width: 90vw;
+    width: 100%;
     background-color: rgb(177, 217, 255);
 }
 

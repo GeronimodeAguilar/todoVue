@@ -12,37 +12,37 @@
 </template>
 
 <script>
-    import TaskGrid from './components/TaskGrid.vue';
-    import ArchiveGrid from './components/ArchiveGrid.vue';
-    import NewTask from './components/NewTask.vue';
-    import Header from './components/Header.vue';
+import TaskGrid from './components/TaskGrid.vue'
+import ArchiveGrid from './components/ArchiveGrid.vue'
+import NewTask from './components/NewTask.vue'
+import Header from './components/Header.vue'
 
-    export default {
-        data: function () {
-            return {
-                tasks: [],               
-                archives: []
-            }
-        },
-        methods: {
-            newTask(task) {
-                this.tasks.push(task);
-            },
-            archiveTask(task, index) {
-                this.tasks.splice(index, 1);
-                this.archives.push(task);
-            },
-            deleteArchive(index) {
-                this.archives.splice(index, 1);
-            }
-        },
-        components: {
-            appTaskGrid: TaskGrid,
-            appArchiveGrid: ArchiveGrid,
-            appNewTask: NewTask,
-            appHeader: Header
-        }
+export default {
+  data: function () {
+    return {
+      tasks: [],
+      archives: []
     }
+  },
+  methods: {
+    newTask (task) {
+      this.tasks.push(task)
+    },
+    archiveTask (task, index) {
+      this.tasks.splice(index, 1)
+      this.archives.push(task)
+    },
+    deleteArchive (index) {
+      this.archives.splice(index, 1)
+    }
+  },
+  components: {
+    appTaskGrid: TaskGrid,
+    appArchiveGrid: ArchiveGrid,
+    appNewTask: NewTask,
+    appHeader: Header
+  }
+}
 </script>
 
 <style>

@@ -5,19 +5,19 @@
 </template>
 
 <script>
-    import Archive from './Archive.vue';
+import Archive from './Archive.vue'
 
-    export default {
-        props: ['archives'],
-        components: {
-            appArchive: Archive
-        },
-        methods: {
-            archiveTask(index) {
-                this.$emit('deleteArchive', index);
-            }
-        }
+export default {
+  props: ['archives'],
+  components: {
+    appArchive: Archive
+  },
+  methods: {
+    archiveTask (index) {
+      this.$emit('deleteArchive', index)
     }
+  }
+}
 </script>
 
 <style>

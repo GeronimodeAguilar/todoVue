@@ -5,19 +5,19 @@
 </template>
 
 <script>
-    import Task from './Task.vue';
+import Task from './Task.vue'
 
-    export default {
-        props: ['tasks'],
-        components: {
-            appTask: Task
-        },
-        methods: {
-            archiveTask(task, index) {
-                this.$emit('archivedTask', task, index);
-            }
-        }
+export default {
+  props: ['tasks'],
+  components: {
+    appTask: Task
+  },
+  methods: {
+    archiveTask (task, index) {
+      this.$emit('archivedTask', task, index)
     }
+  }
+}
 </script>
 
 <style>
