@@ -1,5 +1,6 @@
 <template>
     <div class="archive__box">
+      <h2>Done tasks:</h2>
         <app-archive v-for="(archive, index) in archives" @click.native="archiveTask(index)">{{ archive }}</app-archive>
     </div>
 </template>

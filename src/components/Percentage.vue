@@ -1,13 +1,9 @@
 <template>
-    <div class="header">
-            <div class="progress__container">
-                <div class="progress__box">
+    <div class="percentage">
                     <div class="progress__bar" role="progressbar"
-                        :style="{width: (archiveCount /( archiveCount + taskCount )) * 100 + '%'}">
+                        :style="{height: (archiveCount /( archiveCount + taskCount )) * 100 + '%'}">
                        <p class="progress__text"> {{ truncPercentage() + '%'}}</p>
                     </div>
-                </div>
-            </div>
     </div>
 </template>
 <script>
@@ -20,3 +16,4 @@ export default {
   }
 }
 </script>
+

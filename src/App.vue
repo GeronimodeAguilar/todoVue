@@ -1,13 +1,13 @@
 <template>
     <div class="main__container">
+        <app-percentage :taskCount="tasks.length" :archiveCount="archives.length" ></app-percentage>
+        <section class="front__box">
         <section class="form__box">
-        <app-header :taskCount="tasks.length" :archiveCount="archives.length" ></app-header>
         <app-new-task @taskAdded="newTask"></app-new-task>
         </section>
-        <h2>Tasks:</h2>
         <app-task-grid :tasks="tasks" @archivedTask="archiveTask"></app-task-grid>
-        <h2>Done tasks:</h2>
         <app-archive-grid :archives="archives" @deleteArchive="deleteArchive"></app-archive-grid>
+        </section>
     </div>
 </template>
 
@@ -15,12 +15,12 @@
 import TaskGrid from './components/TaskGrid.vue'
 import ArchiveGrid from './components/ArchiveGrid.vue'
 import NewTask from './components/NewTask.vue'
-import Header from './components/Header.vue'
+import Percentage from './components/Percentage.vue'
 
 export default {
   data: function () {
     return {
-      tasks: [],
+      tasks: ['10 pull-ups', '10 000 steps', '20 push-ups', '50 sit-ups'],
       archives: []
     }
   },
@@ -40,7 +40,7 @@ export default {
     appTaskGrid: TaskGrid,
     appArchiveGrid: ArchiveGrid,
     appNewTask: NewTask,
-    appHeader: Header
+    appPercentage: Percentage
   }
 }
 </script>
